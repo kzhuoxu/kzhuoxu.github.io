@@ -1,0 +1,45 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "title": "GrantBridge",
+            "description": "A platform that connects grant makers and seekers with AI-powered tools to enhance grant application success rates.",
+            "technologies": [
+                "Python",
+                "JavaScript",
+                "React",
+                "Node.js",
+                "MongoDB"
+            ],
+            "image": "/freepik__background__6550.png",
+            "github": "https://github.com/yourusername/grantbridge",
+            "liveDemo": "https://grantbridge.live",
+            "startDate": "2024-01-01",
+            "endDate": "2024-12-31",
+            "highlights": [
+                "Developed a recommendation system using machine learning to predict grant success.",
+                "Implemented real-time chat for communication between stakeholders."
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Data Analysis on NYC Restaurant Health Inspections",
+            "description": "Analysis of NYC restaurant inspection results to uncover patterns in health violations and their impact on customer ratings.",
+            "technologies": [
+                "Python",
+                "Pandas",
+                "Scikit-Learn",
+                "Bokeh"
+            ],
+            "image": "/statistics-concept-illustration/Statistics.jpg",
+            "github": "https://github.com/yourusername/nyc-restaurants",
+            "liveDemo": null,
+            "startDate": "2024-05-01",
+            "endDate": "2024-08-01",
+            "highlights": [
+                "Utilized k-means clustering to identify common violation patterns.",
+                "Performed regression analysis to understand the impact on customer ratings."
+            ]
+        }
+    ]
+}

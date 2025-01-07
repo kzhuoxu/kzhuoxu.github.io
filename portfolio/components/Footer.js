@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Footer = () => {
     return (
-        <footer className="footer mx-6 mt-6 pb-6" style={{backgroundColor: "white" }}>
+        <footer className="mx-6 mt-6 pb-6">
             <div className="is-size-3 has-text-weight-medium">Georgia Xu</div>
             <div className="columns is-vcentered mt-6">
                 <div className="column is-one-quarter is-size-6">

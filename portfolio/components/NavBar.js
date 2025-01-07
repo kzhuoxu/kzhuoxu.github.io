@@ -9,9 +9,9 @@ const NavBar = () => {
             // style={{ borderBottom: "1px solid white" }}
         >
             <div className="navbar-brand">
-                <a className="navbar-item is-size-3 has-text-weight-medium" href="/">
+                <Link className="navbar-item is-size-3 has-text-weight-medium" href="/">
                     Georgia Xu
-                </a>
+                </Link>
             </div>
             <div className="navbar-menu is-active is-size-5">
                 <div className="navbar-start">
@@ -20,17 +20,17 @@ const NavBar = () => {
 
                 <div className="columns">
                     <div className="navbar-end">
-                        <a className="navbar-item" href="/#projects">Projects</a>
+                        <Link className="navbar-item" href="/#projects">Projects</Link>
                     </div> 
 
                     <div className="navbar-end">
                         {/* TODO: Blogs? */}
-                        <a className="navbar-item" href="/#blog">Blog</a>
+                        <Link className="navbar-item" href="https://www.linkedin.com/in/zhuoqi-xu-2205891a4/">LinkedIn</Link>
                     </div>
 
                     <div className="navbar-end">
                         {/* TODO: Link to footer */}
-                        <a className="navbar-item" href="/#footer">Contact</a>
+                        <a className="navbar-item" href="https://github.com/kzhuoxu">GitHub</a>
                     </div>
                 </div>
                 

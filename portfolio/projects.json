@@ -3,6 +3,7 @@
         {
             "id": 1,
             "title": "GrantBridge",
+            "slug": "grantbridge",
             "description": "A platform that connects grant makers and seekers with AI-powered tools to enhance grant application success rates.",
             "technologies": [
                 "Python",
@@ -11,7 +12,7 @@
                 "Node.js",
                 "MongoDB"
             ],
-            "image": "/freepik__background__6550.png",
+            "image": "/images/freepik__background__6550.png",
             "github": "https://github.com/yourusername/grantbridge",
             "liveDemo": "https://grantbridge.live",
             "startDate": "2024-01-01",
@@ -24,6 +25,7 @@
         {
             "id": 2,
             "title": "Data Analysis on NYC Restaurant Health Inspections",
+            "slug": "nycrestaurant",
             "description": "Analysis of NYC restaurant inspection results to uncover patterns in health violations and their impact on customer ratings.",
             "technologies": [
                 "Python",
@@ -31,7 +33,7 @@
                 "Scikit-Learn",
                 "Bokeh"
             ],
-            "image": "/statistics-concept-illustration/Statistics.jpg",
+            "image": "/images/Statistics.jpg",
             "github": "https://github.com/yourusername/nyc-restaurants",
             "liveDemo": null,
             "startDate": "2024-05-01",
@@ -40,6 +42,73 @@
                 "Utilized k-means clustering to identify common violation patterns.",
                 "Performed regression analysis to understand the impact on customer ratings."
             ]
+        },
+        {
+            "id": 3,
+            "title": "How Solar Panels Power Up NYC",
+            "slug": "solarpanels",
+            "description": "An interactive geospatial StoryMap showcasing urban development trends and community impact using ArcGIS tools.",
+            "technologies": [
+                "ArcGIS",
+                "StoryMaps",
+                "Data Visualization",
+                "Urban System",
+                "Renewable Energy"
+            ],
+            "image": "/images/solar panels NYC.png",
+            "github": null,
+            "liveDemo": null,
+            "startDate": "2023-09-01",
+            "endDate": "2023-10-01",
+            "highlights": [
+                "Utilized k-means clustering to identify common violation patterns.",
+                "Performed regression analysis to understand the impact on customer ratings."
+            ],
+            "iframeSrc": "https://storymaps.arcgis.com/stories/c73d0dea76844ee58980aae16f973f3f"
+        },
+        {
+            "id": 4,
+            "title": "New Yorkers: Get Prepared for Flooding",
+            "slug": "nycflooding",
+            "description": "An interactive geospatial StoryMap showcasing urban development trends and community impact using ArcGIS tools.",
+            "technologies": [
+                "ArcGIS",
+                "StoryMaps",
+                "Data Visualization",
+                "Urban System"
+            ],
+            "image": "/images/nyc_flooding.jpg",
+            "github": null,
+            "liveDemo": null,
+            "startDate": "2023-010-01",
+            "endDate": "2023-11-01",
+            "highlights": [
+                "Utilized k-means clustering to identify common violation patterns.",
+                "Performed regression analysis to understand the impact on customer ratings."
+            ],
+            "iframeSrc": "https://storymaps.arcgis.com/stories/5949f5b63fdc4f2995d2d19f12b39af8"
+        },
+        {
+            "id": 5,
+            "title": "How New Yorkers read books",
+            "slug": "nycread",
+            "description": "An interactive geospatial StoryMap showcasing urban development trends and community impact using ArcGIS tools.",
+            "technologies": [
+                "ArcGIS",
+                "StoryMaps",
+                "Data Visualization",
+                "Culture System"
+            ],
+            "image": "/images/nypl.jpg",
+            "github": null,
+            "liveDemo": null,
+            "startDate": "2023-010-01",
+            "endDate": "2023-11-01",
+            "highlights": [
+                "Utilized k-means clustering to identify common violation patterns.",
+                "Performed regression analysis to understand the impact on customer ratings."
+            ],
+            "iframeSrc": "https://storymaps.arcgis.com/stories/aa0f0953bcae4943b314bd7a9260a40e"
         }
     ]
 }

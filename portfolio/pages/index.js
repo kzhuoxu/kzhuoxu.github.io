@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import ProjectDisplay from "../components/ProjectDisplay";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   const [projects, setProjects] = useState([]);
@@ -23,13 +24,13 @@ export default function Home() {
           <div className="hero-body columns is-vcentered">
             <div className="column is-two-thirds">
               <p className="is-size-1 has-text-weight-medium">
-                Georgia Xu is a data scientist and software engineer that turns
+                Georgia Xu is a full-stack data scientist that turns
                 data into insights.
               </p>
             </div>
             <div className="column is-one-third">
               <figure className="image">
-                <img src="/startup-life-concept-illustration/3255469.jpg" />
+                <Image src="/images/startup-life-concept-illustration.jpg" />
               </figure>
             </div>
           </div>
@@ -42,7 +43,7 @@ export default function Home() {
                 Recent Projects
               </p>
             </div>
-            <div className="columns mt-6">
+            <div className="columns is-multiline is-8 mt-6">
               {projects.map((project) => (
                 <ProjectDisplay
                   key={project.id}

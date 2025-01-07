@@ -8,9 +8,10 @@ function MyPortfolio({ Component, pageProps }) {
   return (
     <div>
       <Head>
-        <title>Georgia Xu's | Data Science and Beyond</title>
+        <title>Georgia Xu`s | Data Science and Beyond</title>
         <meta name="description" content="Portfolio Homepage"/>
-        <link rel="icon" href="/analysis.png" />
+        <link rel="icon" href="/icons/analysis.png" />
+        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
       </Head>
       <NavBar />
       <div className="pt-12">

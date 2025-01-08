@@ -1,16 +1,17 @@
-// import ClassLink from "../components/ClassLink";
 import { useEffect, useState } from "react";
 import ProjectDisplay from "../components/ProjectDisplay";
-import Link from "next/link";
-import Image from "next/image";
 
-export default function Home() {
+const Home = () => {
   const [projects, setProjects] = useState([]);
 
   const fetchProjects = async () => {
-    const response = await fetch("/api/projects");
-    const data = await response.json();
-    setProjects(data);
+    try {
+      const response = await fetch("/projects.json"); // Assuming `projects.json` is in the `public/` folder
+      const data = await response.json();
+      setProjects(data.projects || []); // Adjust this based on your JSON structure
+    } catch (error) {
+      console.error("Error fetching projects:", error);
+    }
   };
 
   useEffect(() => {
@@ -20,6 +21,7 @@ export default function Home() {
   return (
     <div>
       <main>
+        {/* Hero Section */}
         <section className="hero is-small mx-6">
           <div className="hero-body columns is-vcentered">
             <div className="column is-two-thirds">
@@ -30,12 +32,17 @@ export default function Home() {
             </div>
             <div className="column is-one-third">
               <figure className="image">
-                <Image src="/images/startup-life-concept-illustration.jpg" />
+                <img
+                  src="/images/startup-life-concept-illustration.jpg"
+                  alt="Startup Life Illustration"
+                  style={{ maxWidth: "100%", height: "auto" }}
+                />
               </figure>
             </div>
           </div>
         </section>
 
+        {/* Projects Section */}
         <section id="projects" className="hero is-medium is-info">
           <div className="hero-body is-vcentered mx-6">
             <div className="columns">
@@ -48,14 +55,14 @@ export default function Home() {
                 <ProjectDisplay
                   key={project.id}
                   project={project}
-                ></ProjectDisplay>
+                />
               ))}
             </div>
           </div>
         </section>
-
-        <section></section>
       </main>
     </div>
   );
-}
+};
+
+export default Home;

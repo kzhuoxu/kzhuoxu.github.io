@@ -1,31 +1,37 @@
-import fs from "fs/promises";
-import path from "path";
-import Image from "next/image";
+import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
 
+const Project = () => {
+  const { slug } = useParams();
+  const [project, setProject] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-export async function getStaticPaths() {
-  const filePath = path.join(process.cwd(), "projects.json");
-  const data = await fs.readFile(filePath);
-  const projects = JSON.parse(data).projects;
+  useEffect(() => {
+    const fetchProject = async () => {
+      try {
+        // Assuming projects.json is in the public folder
+        const response = await fetch('/projects.json');
+        const data = await response.json();
+        const foundProject = data.projects.find(p => p.slug === slug);
+        setProject(foundProject);
+      } catch (error) {
+        console.error('Error fetching project:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  const paths = projects.map((project) => ({
-    params: { slug: project.slug },
-  }));
+    fetchProject();
+  }, [slug]);
 
-  return { paths, fallback: false }; // fallback: false ensures 404 for unknown slugs
-}
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
-export async function getStaticProps({ params }) {
-  const filePath = path.join(process.cwd(), "projects.json");
-  const data = await fs.readFile(filePath);
-  const projects = JSON.parse(data).projects;
+  if (!project) {
+    return <div>Project not found.</div>;
+  }
 
-  const project = projects.find((p) => p.slug === params.slug);
-
-  return { props: { project } };
-}
-
-const ProjectPage = ({ project }) => {
   return (
     <section className="hero is-small mx-6">
       <div className="hero-body columns is-vcentered">
@@ -40,6 +46,7 @@ const ProjectPage = ({ project }) => {
                 href={project.liveDemo}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="button is-primary mr-2"
               >
                 Live Demo
               </a>
@@ -49,14 +56,15 @@ const ProjectPage = ({ project }) => {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="button is-dark"
               >
                 GitHub
               </a>
             )}
           </div>
-          <div className="tags">
+          <div className="tags mt-4">
             {project.technologies.map((tech, index) => (
-              <span key={index} className="tag">
+              <span key={index} className="tag is-primary">
                 {tech}
               </span>
             ))}
@@ -64,7 +72,11 @@ const ProjectPage = ({ project }) => {
         </div>
         <div className="column is-one-third">
           <figure className="image">
-            <Image src={project.image} alt={project.title} />
+            <img 
+              src={project.image} 
+              alt={project.title}
+              style={{ maxWidth: '100%', height: 'auto' }}
+            />
           </figure>
         </div>
       </div>
@@ -75,6 +87,7 @@ const ProjectPage = ({ project }) => {
           height="800px"
           frameBorder="0"
           allowFullScreen
+          title={project.title}
           style={{ marginTop: "20px" }}
         ></iframe>
       )}
@@ -82,4 +95,4 @@ const ProjectPage = ({ project }) => {
   );
 };
 
-export default ProjectPage;
+export default Project;

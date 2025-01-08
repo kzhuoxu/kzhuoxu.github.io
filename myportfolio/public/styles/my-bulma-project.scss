@@ -1,0 +1,35 @@
+// Set your brand colors
+$red: #FC221C; // Primary red
+$pink: #F8DFDB; // Secondary pink
+$brown-dark: #40140F; // Background dark brown
+$brown-light: #5C3A33; // Lighter shade of brown (for hover effects)
+$white: #FFFFFF; // White for text and accents
+
+// Typography and spacing
+$family-primary: '"Poppins", sans-serif'; // Main font
+$font-size-base: 1rem; // Adjust base font size
+$line-height-base: 1.6; // Improve readability
+
+// Bulma customizations
+@use "bulma/sass" with (
+  // Colors
+  $text: $brown-dark,
+  $link: $red,
+  $primary: $brown-dark,
+  $info: $pink,
+  $success: $white, // Main background color
+  $warning: $pink,
+  $danger: $red,
+  $grey-dark: $brown-light, // Use lighter brown for secondary elements
+  $grey-light: $white,
+
+  // Buttons and controls
+  $control-border-width: 2px,
+  $input-shadow: none,
+
+  // Fonts
+  $family-primary: $family-primary
+);
+
+// Import Google Fonts
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");

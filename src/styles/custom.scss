@@ -1,0 +1,17 @@
+// Import Bulma's core
+@import "bulma/sass/utilities/_all.sass";
+
+// Set your custom variables here
+$family-primary: "Poppins", sans-serif;
+$text: #000000;
+$link: #FC221C;
+$primary: #40140F;
+$info: #F8DFDB;
+$danger: #FC221C;
+$success: #F8DFDB;
+$warning: #FC221C;
+$dark: #000000;
+$light: #FFFFFF;
+
+// Import Bulma and its elements
+@import "bulma/bulma.sass"; 

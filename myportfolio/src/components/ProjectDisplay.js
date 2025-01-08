@@ -1,5 +1,4 @@
-import Link from "next/link";
-import Image from "next/image";
+import { Link } from "react-router-dom";
 
 const ProjectDisplay = ({ project }) => {
   const tagIcons = {
@@ -13,16 +12,23 @@ const ProjectDisplay = ({ project }) => {
     R: "fas fa-chart-bar",
     Pandas: "/icons/Pandas.png",
     ArcGIS: "/icons/arcgis.png",
-    StoryMaps: "/icons/storymaps.png"
+    StoryMaps: "/icons/storymaps.png",
   };
 
   return (
     <div className="column is-half">
-      <Link href={`/projects/${project.slug}`}>
+      <Link to={`/projects/${project.slug}`}>
         <figure className="image is-5by4">
-          <Image src={project.image} alt={project.title} />
+          {/* Replace next/image with a standard img */}
+          <img
+            src={project.image}
+            alt={project.title}
+            // style={{ }}
+          />
         </figure>
-        <p className="is-size-2 has-text-weight-medium mt-4 has-text-primary">{project.title}</p>
+        <p className="is-size-2 has-text-weight-medium mt-4 has-text-primary">
+          {project.title}
+        </p>
         <p className="is-size-5">{project.description}</p>
         <div className="field is-grouped is-multiline mt-4">
           {project.technologies.map((tag, index) => (
@@ -31,7 +37,7 @@ const ProjectDisplay = ({ project }) => {
                 {tagIcons[tag] && tagIcons[tag].startsWith("/") ? (
                   // Render custom icon
                   <span className="tag is-primary">
-                    <Image
+                    <img
                       src={tagIcons[tag]}
                       alt={tag}
                       style={{ width: "15px", height: "15px" }}

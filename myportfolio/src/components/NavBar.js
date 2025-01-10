@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
   return (
     <nav
-      class="navbar mx-6 mt-6 pb-6"
+      className="navbar mx-6 mt-6 pb-6"
       role="navigation"
       aria-label="main navigation"
     >

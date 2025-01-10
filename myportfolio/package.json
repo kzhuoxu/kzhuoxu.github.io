@@ -1,7 +1,6 @@
 {
   "name": "myportfolio",
   "version": "0.1.0",
-  "homepage": "https://kzhuoxu.github.io/kzhuoxu.github.io",
   "private": true,
   "dependencies": {
     "bulma": "^1.0.3",
@@ -14,8 +13,6 @@
   "scripts": {
     "build-bulma": "sass --load-path=node_modules my-bulma-project.scss my-bulma-project.css",
     "start-bulma": "npm run build-bulma -- --watch",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

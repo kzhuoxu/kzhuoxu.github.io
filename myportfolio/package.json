@@ -1,7 +1,7 @@
 {
   "name": "myportfolio",
   "version": "0.1.0",
-  "homepage": "/",
+  "homepage": "https://georgiaxu.com",
   "private": true,
   "dependencies": {
     "bulma": "^1.0.3",
